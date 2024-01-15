@@ -2,9 +2,10 @@ name: FTP Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   repository_dispatch:
-    types: [update]
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
