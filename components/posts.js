@@ -7,10 +7,8 @@ import { eyecatchLocal } from 'lib/constants'
 import ConvertBody from '@/components/convert-body'
 
 export const client = createClient({
-  // serviceDomain: process.env.NEXT_PUBLIC_SERVICE_DOMAIN,
-  // apiKey: process.env.NEXT_PUBLIC_API_KEY,
-  serviceDomain: "satsuki-blog",
-  apiKey: "dc83ca7826cb4837a2a6259338081f31aa78",
+  serviceDomain: process.env.NEXT_PUBLIC_SERVICE_DOMAIN,
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
 })
 
 export default async function Posts({ catID, limit = 10 }) {
