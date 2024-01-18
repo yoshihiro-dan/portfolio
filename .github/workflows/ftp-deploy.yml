@@ -21,15 +21,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
 
-      - run: |
-          npm ci
-          npm run build --if-present
-        
       - name: create env file
         run: |
           touch .env
           echo SERVICE_DOMAIN=${{ secrets.SERVICE_DOMAIN }} >> .env
           echo API_KEY=${{ secrets.API_KEY }} >> .env
+
+      - run: |
+          npm ci
+          npm run build --if-present
 
       - name: FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
