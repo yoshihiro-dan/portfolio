@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-          - name: microCMS
+      - name: microCMS
         env:
           SERVICE_DOMAIN: ${{ secrets.SERVICE_DOMAIN }}
           API_KEY: ${{ secrets.API_KEY }}
