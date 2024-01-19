@@ -12,7 +12,7 @@ const nextConfig = {
     },
     assetPrefix: prefixPath,
     basePath: prefixPath,
-    reactStrictMode: false,
+    reactStrictMode: true,
     images: {
       domains: ['images.microcms-assets.io'],
     },
