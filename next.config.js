@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === 'production'
-const prefixPath = !isProd ? '/works/portfolio' : ''
+
+/* 公開時のサブディレクトリ */
+const SUB_DIRECTORY = "/works/portfolio";
+/* 本番環境と開発環境の分岐用のフラグ */
+const isProd = process.env.NODE_ENV == "production"
+
 const nextConfig = {
     output: 'export',
     eslint: { // eslintのlint checkをbuild時にoff
@@ -10,9 +14,9 @@ const nextConfig = {
     typescript: { // type checkをbuild時にoff
       ignoreBuildErrors: true,
     },
-    assetPrefix: prefixPath,
-    basePath: prefixPath,
-    reactStrictMode: true,
+    assetPrefix: isProd ? SUB_DIRECTORY : "",
+    basePath: isProd ? SUB_DIRECTORY : "",
+    reactStrictMode: false,
     images: {
       domains: ['images.microcms-assets.io'],
     },
