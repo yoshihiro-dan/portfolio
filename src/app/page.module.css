@@ -334,6 +334,16 @@
   border: 1px solid #F2F2F2;
   background-color: #fff;
 }
+.portfolio .splide__container :global(.splide__arrow) {
+  width: 3em;
+  height: 3em;
+}
+.portfolio .splide__container :global(.splide__arrow--prev) {
+  left: 0.5em;
+}
+.portfolio .splide__container :global(.splide__arrow--next) {
+  right: 0.5em;
+}
 .portfolio .splide__container article > div {
   padding: 16px;
 }
@@ -544,7 +554,8 @@
     row-gap: 16px;
   }
   .works .post article > figure {
-    width: 100%;
+    width: 93.75%;
+    margin-inline: auto;
   }
   .works .post article > div {
     width: 100%;
