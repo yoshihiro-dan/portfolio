@@ -38,11 +38,11 @@ export default function Home() {
 
   return (
     <>
-    <style jsx>{`
+    {/* <style jsx>{`
       .portfolio .splide__container article h3 {
         background-image: url("${basePath}/images/ttl-bg.png");
       }
-    `}</style>
+    `}</style> */}
     <main className={styles.main}>
       <section className={styles.section}>
         <div id="top" className="scroll__target">
@@ -197,7 +197,10 @@ export default function Home() {
               <SplideTrack>
                 <SplideSlide>
                 <article>
-                  <h3>要件定義/デザイン</h3>
+                  <h3>
+                    <span>要件定義/デザイン</span>
+                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                  </h3>
                   <div>
                     <p>短い時間で知りたい情報にアクセスしやすいように構成を考え、シンプルなデザインにまとめました。</p>
                     <ul>
@@ -210,7 +213,10 @@ export default function Home() {
                 </SplideSlide>
                 <SplideSlide>
                 <article>
-                  <h3>構築</h3>
+                  <h3>
+                    <span>構築</span>
+                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                  </h3>
                   <div>
                     <p>
                       Next.js 13を使用して構築しています。<br/>コンポーネントやスタイルなどは、役割ごとでファイルをまとめ、保守性を高めています。<br/>
@@ -225,7 +231,10 @@ export default function Home() {
                 </SplideSlide>
                 <SplideSlide>
                 <article>
-                  <h3>Skill</h3>
+                  <h3>
+                    <span>Skill</span>
+                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                  </h3>
                   <div>
                     <p>レスポンシブデザインで、モバイルファーストの設計にしています。<br/>固定ナビゲーションやスライダーを使い、画面幅に合わせて情報の整理をしています。</p>
                   </div>  
@@ -233,7 +242,10 @@ export default function Home() {
                 </SplideSlide>
                 <SplideSlide>
                 <article>
-                  <h3>Skill/Works部分</h3>
+                  <h3>
+                    <span>Skill/Works部分</span>
+                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                  </h3>
                   <div>
                     <p>更新頻度が高いコンテンツは、microCMSを使って運用しています。</p>
                   </div>  
@@ -241,7 +253,10 @@ export default function Home() {
                 </SplideSlide>
                 <SplideSlide>
                 <article>
-                  <h3>アニメーション</h3>
+                  <h3>
+                    <span>アニメーション</span>
+                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                  </h3>
                   <div>
                     <p>コードを書いている光景をイメージし、ファーストビューにタイピング風に文字が出現する演出をCSSとJavaScriptで実装しています。</p>
                   </div>  
@@ -249,7 +264,10 @@ export default function Home() {
                 </SplideSlide>
                 <SplideSlide>
                 <article>
-                  <h3>作成の目的</h3>
+                  <h3>
+                    <span>作成の目的</span>
+                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                  </h3>
                   <div>
                     <p>新しく学んだことの理解と技術を定着させるために、このポートフォリを作成しました。</p>
                   </div>  
