@@ -38,11 +38,6 @@ export default function Home() {
 
   return (
     <>
-    {/* <style jsx>{`
-      .portfolio .splide__container article h3 {
-        background-image: url("${basePath}/images/ttl-bg.png");
-      }
-    `}</style> */}
     <main className={styles.main}>
       <section className={styles.section}>
         <div id="top" className="scroll__target">
@@ -169,10 +164,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.portfolio} portfolio`}>
+        <section className={styles.portfolio}>
           <h2>Portfolio</h2>
           <p>このページ制作の成り立ちをご紹介します</p>
-          <section className={`${styles.splide__container} splide__container`}>
+          <section className={styles.splide__container}>
             <Splide
               hasTrack={ false }
               aria-label=""
@@ -196,82 +191,82 @@ export default function Home() {
             >
               <SplideTrack>
                 <SplideSlide>
-                <article>
-                  <h3>
-                    <span>要件定義/デザイン</span>
-                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
-                  </h3>
-                  <div>
-                    <p>短い時間で知りたい情報にアクセスしやすいように構成を考え、シンプルなデザインにまとめました。</p>
-                    <ul>
-                      <li>・目的：会いたいと思ってもらう</li>
-                      <li>・ターゲット：採用担当者様</li>
-                      <li>・ベネフィット：見た目だけの構築ではなく運用まで考えることができるコーダーの採用</li>
-                    </ul>
-                  </div>  
-                </article>
+                  <article>
+                    <h3>
+                      <span>要件定義/デザイン</span>
+                      <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                    </h3>
+                    <div>
+                      <p>短い時間で知りたい情報にアクセスしやすいように構成を考え、シンプルなデザインにまとめました。</p>
+                      <ul>
+                        <li>・目的：会いたいと思ってもらう</li>
+                        <li>・ターゲット：採用担当者様</li>
+                        <li>・ベネフィット：見た目だけの構築ではなく運用まで考えることができるコーダーの採用</li>
+                      </ul>
+                    </div>  
+                  </article>
                 </SplideSlide>
                 <SplideSlide>
-                <article>
-                  <h3>
-                    <span>構築</span>
-                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
-                  </h3>
-                  <div>
-                    <p>
-                      Next.js 13を使用して構築しています。<br/>コンポーネントやスタイルなどは、役割ごとでファイルをまとめ、保守性を高めています。<br/>
-                      GitHub：https://github.com/yoshihiro-dan/portfolio
-                    </p>
-                    <ul>
-                      <li>作業期間：2023/9/24〜2023/10/24</li>
-                      <li>使用ツール：figma</li>
-                    </ul>
-                  </div>  
-                </article>
+                  <article>
+                    <h3>
+                      <span>構築</span>
+                      <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                    </h3>
+                    <div>
+                      <p>
+                        Next.js 13を使用して構築しています。<br/>コンポーネントやスタイルなどは、役割ごとでファイルをまとめ、保守性を高めています。<br/>
+                        GitHub：https://github.com/yoshihiro-dan/portfolio
+                      </p>
+                      <ul>
+                        <li>作業期間：2023/9/24〜2023/10/24</li>
+                        <li>使用ツール：figma</li>
+                      </ul>
+                    </div>  
+                  </article>
                 </SplideSlide>
                 <SplideSlide>
-                <article>
-                  <h3>
-                    <span>Skill</span>
-                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
-                  </h3>
-                  <div>
-                    <p>レスポンシブデザインで、モバイルファーストの設計にしています。<br/>固定ナビゲーションやスライダーを使い、画面幅に合わせて情報の整理をしています。</p>
-                  </div>  
-                </article>
+                  <article>
+                    <h3>
+                      <span>Skill</span>
+                      <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                    </h3>
+                    <div>
+                      <p>レスポンシブデザインで、モバイルファーストの設計にしています。<br/>固定ナビゲーションやスライダーを使い、画面幅に合わせて情報の整理をしています。</p>
+                    </div>  
+                  </article>
                 </SplideSlide>
                 <SplideSlide>
-                <article>
-                  <h3>
-                    <span>Skill/Works部分</span>
-                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
-                  </h3>
-                  <div>
-                    <p>更新頻度が高いコンテンツは、microCMSを使って運用しています。</p>
-                  </div>  
-                </article>
+                  <article>
+                    <h3>
+                      <span>Skill/Works部分</span>
+                      <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                    </h3>
+                    <div>
+                      <p>更新頻度が高いコンテンツは、microCMSを使って運用しています。</p>
+                    </div>  
+                  </article>
                 </SplideSlide>
                 <SplideSlide>
-                <article>
-                  <h3>
-                    <span>アニメーション</span>
-                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
-                  </h3>
-                  <div>
-                    <p>コードを書いている光景をイメージし、ファーストビューにタイピング風に文字が出現する演出をCSSとJavaScriptで実装しています。</p>
-                  </div>  
-                </article>
+                  <article>
+                    <h3>
+                      <span>アニメーション</span>
+                      <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                    </h3>
+                    <div>
+                      <p>コードを書いている光景をイメージし、ファーストビューにタイピング風に文字が出現する演出をCSSとJavaScriptで実装しています。</p>
+                    </div>  
+                  </article>
                 </SplideSlide>
                 <SplideSlide>
-                <article>
-                  <h3>
-                    <span>作成の目的</span>
-                    <img src={`${basePath}/images/ttl-bg.png`} alt="" />
-                  </h3>
-                  <div>
-                    <p>新しく学んだことの理解と技術を定着させるために、このポートフォリを作成しました。</p>
-                  </div>  
-                </article>
+                  <article>
+                    <h3>
+                      <span>作成の目的</span>
+                      <img src={`${basePath}/images/ttl-bg.png`} alt="" />
+                    </h3>
+                    <div>
+                      <p>新しく学んだことの理解と技術を定着させるために、このポートフォリを作成しました。</p>
+                    </div>  
+                  </article>
                 </SplideSlide>
               </SplideTrack>
 
