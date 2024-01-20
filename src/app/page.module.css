@@ -512,7 +512,7 @@
   }
 
   .intro {
-    grid-template-columns: 70px 272px;
+    grid-template-columns: 70px 260px;
     column-gap: 6px;
   }
 
