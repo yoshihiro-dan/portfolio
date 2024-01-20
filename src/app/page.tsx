@@ -45,7 +45,7 @@ export default function Home() {
             <div className={styles.intro_text}>
               <h1>Yoshihiro Dan Portfolio</h1>
               <div className="cursor">
-                <p className="typing js_typing">見た目だけの構築ではなく、<br/>ページを最適化するための実装ができます。</p>
+                <p className="typing js_typing">見た目だけの構築ではなく、<br/>ページの最適化を含めた実装ができます。</p>
               </div>
             </div>
             <div className={styles.intro_img}>
