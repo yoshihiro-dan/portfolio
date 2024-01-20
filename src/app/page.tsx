@@ -2,12 +2,18 @@
 
 // import Image from 'next/image'
 // import styles from './page.module.css'
+import getConfig from "next/config";
 import {Splide, SplideSlide, SplideTrack} from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import styles from './page.module.css'
 import Posts from '@/components/posts'
 import {useRef, useLayoutEffect} from 'react'
 import {headerSmoothScroll, sectionInView, splideBar, createTypingAnimation} from '../../lib/common'
+
+const SUB_DIRECTORY = "/works/portfolio";
+/* 本番環境と開発環境の分岐用のフラグ */
+const isProd = process.env.NODE_ENV == "production"
+const basePath = isProd ? SUB_DIRECTORY : "";
 
 export default function Home() {
   const textRef = useRef<HTMLDivElement>(null)
@@ -31,6 +37,12 @@ export default function Home() {
   }, []);
 
   return (
+    <>
+    <style jsx>{`
+      .portfolio .splide__container article h3 {
+        background-image: url("${basePath}/images/ttl-bg.png");
+      }
+    `}</style>
     <main className={styles.main}>
       <section className={styles.section}>
         <div id="top" className="scroll__target">
@@ -42,7 +54,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.intro_img}>
-              <img src="/images/profile.png" alt="プロフィール写真" />
+              <img src={`${basePath}/images/profile.png`} alt="プロフィール写真" />
             </div>
           </div>
         </div>
@@ -151,17 +163,16 @@ export default function Home() {
                 </dl>
               </div>
               <div className={styles.about_img}>
-                <img src="/images/profile.png" alt="プロフィール写真" />
+                <img src={`${basePath}/images/profile.png`} alt="プロフィール写真" />
               </div>
             </div>
           </div>
         </section>
 
-        <section className={styles.portfolio}>
+        <section className={`${styles.portfolio} portfolio`}>
           <h2>Portfolio</h2>
           <p>このページ制作の成り立ちをご紹介します</p>
-
-          <section className={styles.splide__container}>
+          <section className={`${styles.splide__container} splide__container`}>
             <Splide
               hasTrack={ false }
               aria-label=""
@@ -203,7 +214,7 @@ export default function Home() {
                   <div>
                     <p>
                       Next.js 13を使用して構築しています。<br/>コンポーネントやスタイルなどは、役割ごとでファイルをまとめ、保守性を高めています。<br/>
-                      GitHub：○○○
+                      GitHub：https://github.com/yoshihiro-dan/portfolio
                     </p>
                     <ul>
                       <li>作業期間：2023/9/24〜2023/10/24</li>
@@ -261,11 +272,11 @@ export default function Home() {
               <h3>組み合わせシミュレーション</h3>
               <p>https://www.attenir.co.jp/collection/2007_order/ring/index.html</p>
               <figure>
-                <img src="/images/js01-01.jpg" alt="画像" />
+                <img src={`${basePath}/images/js01-01.jpg`} alt="画像" />
                 <figcaption>組み合わせのシュミレーションの設計と構築をしました。</figcaption>
               </figure>
               <figure>
-                <img src="/images/js01-02.jpg" alt="画像" />
+                <img src={`${basePath}/images/js01-02.jpg`} alt="画像" />
                 <figcaption>天然石/材質/サイズをJSONファイルの商品情報と照合。該当のデータからシミュレーションの見た目を調整しています。</figcaption>
               </figure>
             </article>
@@ -274,11 +285,11 @@ export default function Home() {
               <h3>住宅ローンのシミュレーション</h3>
               <p>https://photorest.org/simulation/</p>
               <figure>
-                <img src="/images/js02-01.jpg" alt="画像" />
+                <img src={`${basePath}/images/js02-01.jpg`} alt="画像" />
                 <figcaption>PMT関数を利用して、ローンの返済額の払込額を求めています。</figcaption>
               </figure>
               <figure>
-                <img src="/images/js02-01.jpg" alt="画像" />
+                <img src={`${basePath}/images/js02-01.jpg`} alt="画像" />
                 <figcaption>さらに条件を加え、詳細なデータへ加工しています。</figcaption>
               </figure>
             </article>
@@ -287,11 +298,11 @@ export default function Home() {
               <h3>JSONを利用した運用の仕組み</h3>
               <p>https://mytrex.jp/product/?category=all</p>
               <figure>
-                <img src="/images/js03-01.jpg" alt="画像" />
+                <img src={`${basePath}/images/js03-01.jpg`} alt="画像" />
                 <figcaption>全商品を一元管理できる仕組みに改修しました。</figcaption>
               </figure>
               <figure>
-                <img src="/images/js03-02.jpg" alt="画像" />
+                <img src={`${basePath}/images/js03-02.jpg`} alt="画像" />
                 <figcaption>商品ページからも同じデータを取得し、ページのデザインに合わせてデータを加工しています。</figcaption>
               </figure>
             </article>
@@ -299,5 +310,6 @@ export default function Home() {
         </section>
       </section>
     </main>
+    </>
   )
 }

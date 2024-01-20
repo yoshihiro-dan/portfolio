@@ -7,7 +7,7 @@ const SUB_DIRECTORY = "/works/portfolio";
 const isProd = process.env.NODE_ENV == "production"
 
 const nextConfig = {
-    output: 'export',
+    output: isProd ? 'export' : "",
     eslint: { // eslintのlint checkをbuild時にoff
       ignoreDuringBuilds: true,
     },
