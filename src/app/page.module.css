@@ -12,7 +12,7 @@
   place-content: center;
   column-gap: 16px;
   align-items: center;
-  padding: clamp(3rem, 2.7809rem + 0.8989vw, 3.5rem) 0;
+  padding: clamp(3rem, 2.7809rem + 0.8989vw, 3.5rem) 16px;
 }
 .intro_text {
   order:2;
@@ -512,7 +512,7 @@
   }
 
   .intro {
-    grid-template-columns: 82px 272px;
+    grid-template-columns: 70px 272px;
     column-gap: 6px;
   }
 
@@ -559,7 +559,7 @@
   .about .container {
     width: 93.75%;
     margin-inline: auto;
-    grid-template-columns: 82px auto;
+    grid-template-columns: 70px auto;
   }
   .about .about_img img {
     width: 100%;
