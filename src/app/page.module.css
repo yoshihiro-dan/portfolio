@@ -320,15 +320,6 @@
   text-align: center;
   margin-bottom: 20px;
 }
-.portfolio .splide__container :global(.splide__list) {
-  width: 93.75%;
-  margin-inline: auto !important;
-  display: grid !important;
-  justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 72px;
-  row-gap: 24px;
-}
 .portfolio .splide__container :global(.splide__slide) {
   width: 100%;
   border: 1px solid #F2F2F2;
@@ -459,21 +450,16 @@
   margin-inline: auto;
 }
 
-@media (max-width: 700px) {
-  .portfolio .splide__container :global(.slider-progress) {
-    background: #E6EFF2;
-  }
-
-  .portfolio .splide__container :global(.slider-progress-bar) {
-    background: #3B7495;
-    height: 2px;
-    transition: width 400ms ease;
-    width: 0;
-  }
-
-  .footer {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), lightgray 50% / cover no-repeat;
-    background-size: cover;
+/* pc */
+@media (min-width: 701px) {
+  .portfolio .splide__container :global(.splide__list) {
+    width: 93.75%;
+    margin-inline: auto !important;
+    display: grid !important;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 72px;
+    row-gap: 24px;
   }
 }
 
@@ -569,6 +555,7 @@
     grid-template-columns: repeat(1, 1fr);
     row-gap: 24px;
   }
+
   .about .container {
     width: 93.75%;
     margin-inline: auto;
@@ -589,20 +576,30 @@
     display: flex;
   } */
   .portfolio .splide__container :global(.splide__track) {
+    margin-left: 3.125%;
     margin-bottom: 20px;
   }
   .portfolio .splide__container :global(.splide__list) {
-    display: flex !important;
-    gap: 0;
+    /* display: flex; */
+    /* gap: 0; */
     width: 92%;
+    /* margin-left: 3.125% !important; */
   }
   .portfolio .splide__container :global(.slider-progress) {
     width: 92%;
     margin-inline: auto;
   }
-
   .portfolio .splide__container :global(.splide__slide) {
     width: 100%;
+  }
+  .portfolio .splide__container :global(.slider-progress) {
+    background: #E6EFF2;
+  }
+  .portfolio .splide__container :global(.slider-progress-bar) {
+    background: #3B7495;
+    height: 2px;
+    transition: width 400ms ease;
+    width: 0;
   }
 
   .javascript h2 + p {
@@ -614,6 +611,10 @@
     row-gap: 24px;
   }
 
+  .footer {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), lightgray 50% / cover no-repeat;
+    background-size: cover;
+  }
   .footer p {
     text-align: center;
   }

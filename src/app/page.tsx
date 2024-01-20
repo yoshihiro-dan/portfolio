@@ -172,9 +172,9 @@ export default function Home() {
               hasTrack={ false }
               aria-label=""
               options={ {
+                perPage: 1,
                 rewind: true,
                 gap   : '8px',
-                destroy: true, // スライダーを破棄
                 breakpoints: {
                   700: {
                     destroy: false,
@@ -182,6 +182,8 @@ export default function Home() {
                 },
                 arrows: true,
                 pagination: false,
+                flickPower: 600,
+                destroy: true, // スライダーを破棄
                 // autoplay: true,
               } }
               ref={ textRef }
@@ -219,7 +221,6 @@ export default function Home() {
                       </p>
                       <ul>
                         <li>作業期間：2023/9/24〜2023/10/24</li>
-                        <li>使用ツール：figma</li>
                       </ul>
                     </div>  
                   </article>
