@@ -297,7 +297,7 @@ export default function Home() {
 
             <article>
               <h3>住宅ローンのシミュレーション</h3>
-              <p>https://photorest.org/simulation/</p>
+              <p>https://nisot.noor.jp/works/simulation/</p>
               <figure>
                 <img src={`${basePath}/images/js02-01.jpg`} alt="画像" />
                 <figcaption>PMT関数を利用して、ローンの返済額の払込額を求めています。</figcaption>

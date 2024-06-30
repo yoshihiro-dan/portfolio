@@ -452,6 +452,9 @@
 
 /* pc */
 @media (min-width: 701px) {
+  .header {
+    display: none !important;
+  }
   .portfolio .splide__container :global(.splide__list) {
     width: 93.75%;
     margin-inline: auto !important;
